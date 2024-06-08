@@ -14,7 +14,7 @@ Shader "Unlit/Fresnel"
 
         Pass
         {
-            // Blend SrcAlpha OneMinusSrcAlpha
+            Blend SrcAlpha OneMinusSrcAlpha
             ZWrite On
             CGPROGRAM
             #pragma vertex vert
@@ -56,10 +56,10 @@ Shader "Unlit/Fresnel"
             fixed4 frag (v2f i) : SV_Target
             {
                 // sample the texture
-                fixed fresnel = pow(1 - max(0, dot(i.normal, i.viewDir) ), _RimWidth);
-                fresnel = saturate(_RimIntensity * fresnel + _RimBias); 
+                fixed fresnel = pow((1 - max(0, dot(i.normal, i.viewDir))  + _RimBias), _RimWidth);
+                fresnel = saturate(_RimIntensity * fresnel); 
                 fixed4 col = tex2D(_MainTex, i.uv);
-                // col.a = fresnel;
+                col.a = fresnel;
                 return fresnel * col;
             }
             ENDCG
