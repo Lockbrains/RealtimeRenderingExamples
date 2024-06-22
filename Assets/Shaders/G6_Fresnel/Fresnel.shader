@@ -22,7 +22,7 @@ Shader "Unlit/Fresnel"
 
             #include "UnityCG.cginc"
 
-            struct appdata
+            struct a2v
             {
                 float4 pos : POSITION;
                 float3 normal: NORMAL;
@@ -43,7 +43,21 @@ Shader "Unlit/Fresnel"
             fixed _RimIntensity;
             fixed _RimBias;
 
-            v2f vert (appdata v)
+            fixed fresnel(float3 worldNormal, float3 worldViewDir)
+            {
+                const float3 n = normalize(worldNormal);
+                const float3 v = normalize(worldViewDir);
+                return saturate(2.0 * pow((1 - max(0, dot(n,v)) + 0.2), 3.0));
+            }
+
+            fixed fresnel(float3 worldNormal, float3 worldViewDir, float bias, float power, float intensity)
+            {
+                const float3 n = normalize(worldNormal);
+                const float3 v = normalize(worldViewDir);
+                return saturate(intensity * pow((1 - max(0, dot(n,v)) + bias), power));
+            }
+
+            v2f vert (a2v v)
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.pos);
@@ -56,11 +70,10 @@ Shader "Unlit/Fresnel"
             fixed4 frag (v2f i) : SV_Target
             {
                 // sample the texture
-                fixed fresnel = pow((1 - max(0, dot(i.normal, i.viewDir))  + _RimBias), _RimWidth);
-                fresnel = saturate(_RimIntensity * fresnel); 
+                fixed fresnelTerm = fresnel(i.normal, i.viewDir, _RimBias, _RimWidth, _RimIntensity);
                 fixed4 col = tex2D(_MainTex, i.uv);
-                col.a = fresnel;
-                return fresnel * col;
+                col.a = fresnelTerm;
+                return col;
             }
             ENDCG
         }
