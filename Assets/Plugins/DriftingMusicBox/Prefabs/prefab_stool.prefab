@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 638705571143087217}
   - component: {fileID: 8151641518278869743}
   - component: {fileID: 299066262725254704}
+  - component: {fileID: 6582400225330179617}
   m_Layer: 0
   m_Name: SM_stooltop
   m_TagString: Untagged
@@ -83,6 +84,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6582400225330179617
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3506719946615405211}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: 1f805f33d85fa6a48aa183e5e3640e19, type: 3}
 --- !u!1 &4028282312596043182
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,6 +115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4372016428886716180}
+  - component: {fileID: 4039229295747379490}
   m_Layer: 0
   m_Name: prefab_stool
   m_TagString: Untagged
@@ -117,6 +141,33 @@ Transform:
   - {fileID: 8499275944393017542}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -89.969, z: 0}
+--- !u!54 &4039229295747379490
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4028282312596043182}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4895499917203392751
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,6 +179,7 @@ GameObject:
   - component: {fileID: 256069743714488658}
   - component: {fileID: 1614036718904030079}
   - component: {fileID: 5809179954013121262}
+  - component: {fileID: 1304328371696578257}
   m_Layer: 0
   m_Name: SM_stoolleg1
   m_TagString: Untagged
@@ -200,6 +252,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1304328371696578257
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4895499917203392751}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4493585093827132993, guid: 1f805f33d85fa6a48aa183e5e3640e19, type: 3}
 --- !u!1 &5758598101570504986
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,6 +285,7 @@ GameObject:
   - component: {fileID: 8499275944393017542}
   - component: {fileID: 1360215190996248367}
   - component: {fileID: 5598845043462467378}
+  - component: {fileID: 4695009981904558102}
   m_Layer: 0
   m_Name: SM_stoolleg2
   m_TagString: Untagged
@@ -283,3 +358,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4695009981904558102
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5758598101570504986}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1550514412580984892, guid: 1f805f33d85fa6a48aa183e5e3640e19, type: 3}

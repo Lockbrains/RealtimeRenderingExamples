@@ -74,9 +74,9 @@ Shader "Unlit/DissolveBurning"
                 // sample the texture
                 fixed4 col = tex2D(_MainTex, i.uv);
                 fixed alpha = tex2D(_GradientTex, i.uv).r;
-                _Progress = remap(_Progress, 0, 1, -_Spread, 1); 
+                _Progress = remap(_Progress, 0, 1, -1, 1); 
                 alpha -= -_Progress;
-                fixed progressSubtracted = 2 * (alpha / _Spread);
+                fixed progressSubtracted = 2 * alpha;
 
                 // edge burning animation
                 float2 newUV = i.uv + _UVSpeed * _Time;

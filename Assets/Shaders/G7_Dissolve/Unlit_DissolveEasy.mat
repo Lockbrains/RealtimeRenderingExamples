@@ -24,7 +24,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _GradientTex:
-        m_Texture: {fileID: 2800000, guid: 63769cd5bf9c849b0880a5bd22934ea8, type: 3}
+        m_Texture: {fileID: 2800000, guid: c96657207c341449985da02bb5359678, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -34,11 +34,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _DefaultClipValue: 0.5
-    - _EdgeHardness: 0.392
+    - _EdgeHardness: 0.5
     - _EdgeIntensity: 5.25
-    - _EdgeWidth: 0.28
-    - _Progress: 0.318
-    - _Spread: 0.4
+    - _EdgeWidth: 0.16
+    - _Progress: 0.576
+    - _Spread: 1
     m_Colors:
     - _EdgeColor: {r: 1, g: 0.38602668, b: 0, a: 0}
   m_BuildTextureStacks: []
