@@ -37,7 +37,7 @@ Material:
     - _EdgeHardness: 0.216
     - _EdgeIntensity: 5.25
     - _EdgeWidth: 0.32
-    - _Progress: 0.572
+    - _Progress: 1
     - _Spread: 0.914
     m_Colors:
     - _EdgeColor: {r: 0, g: 0.8746934, b: 1, a: 0}

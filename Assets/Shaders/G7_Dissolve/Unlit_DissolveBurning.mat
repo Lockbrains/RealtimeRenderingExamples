@@ -40,9 +40,9 @@ Material:
     - _DefaultClipValue: 0.5
     - _EdgeHardness: 0.5
     - _EdgeIntensity: 8.53
-    - _EdgeWidth: 0.16
-    - _Progress: 0.49
-    - _Spread: 0.893
+    - _EdgeWidth: 0.132
+    - _Progress: 0.539
+    - _Spread: 1
     m_Colors:
     - _EdgeColor: {r: 1, g: 0.38602668, b: 0, a: 0}
     - _UVSpeed: {r: 1, g: -1, b: 0, a: 0}

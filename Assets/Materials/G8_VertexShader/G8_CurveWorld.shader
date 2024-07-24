@@ -15,6 +15,7 @@ Shader "Unlit/G8_CurveWorld"
         _CurveFactor ("Curve Factor", float) = 1.0
         [Toggle] _CurveX ("Curve On X Axis", Float) = 0 
         [Toggle] _CurveY ("Curve On Y Axis", Float) = 1
+        [Toggle] _OffsetX ("Offset On X Axis?", Float) = 0
         
     }
     SubShader
@@ -62,6 +63,7 @@ Shader "Unlit/G8_CurveWorld"
             float _CurveFactor;
             float _CurveX;
             float _CurveY;
+            float _OffsetX;
 
             v2f vert (appdata v)
             {
@@ -85,9 +87,12 @@ Shader "Unlit/G8_CurveWorld"
                 o.uv = TRANSFORM_TEX(v.uv, _MainTex);
 
                 // set vertex position
-                float dist = (worldPos - _WorldSpaceCameraPos).z;
-                dist *= dist * _CurveFactor;
-                worldPos -= float3(dist * _CurveX, dist * _CurveY, 0);
+                float distZ = (worldPos - _WorldSpaceCameraPos).z;
+                distZ *= distZ * _CurveFactor;
+                float distX = (worldPos - _WorldSpaceCameraPos).x;
+                distX *= distX * _CurveFactor;
+                
+                worldPos -= float3(distZ * _CurveX, distZ * _CurveY + distX * _OffsetX, 0);
 
                 float3 vertex = TransformWorldToObject(worldPos);
                 

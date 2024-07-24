@@ -361,10 +361,11 @@ Shader "Glitch"
 				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
 
 				float3 viewToObjDir40 = mul( UNITY_MATRIX_T_MV, float4( _VertexOffset, 0 ) ).xyz;
+				float3 ase_objectScale = float3( length( GetObjectToWorldMatrix()[ 0 ].xyz ), length( GetObjectToWorldMatrix()[ 1 ].xyz ), length( GetObjectToWorldMatrix()[ 2 ].xyz ) );
 				float3 ase_worldPos = TransformObjectToWorld( (v.positionOS).xyz );
 				float mulTime10 = _TimeParameters.x * -2.5;
 				float2 appendResult11 = (float2((ase_worldPos.y*_GlitchTiling + mulTime10) , _TimeParameters.x));
-				float3 GlitchVertexOffset20 = ( ( viewToObjDir40 * _Intensity ) * (tex2Dlod( _TextureSample0, float4( appendResult11, 0, 0.0) ).r*2.0 + -1.0) );
+				float3 GlitchVertexOffset20 = ( ( viewToObjDir40 * ( _Intensity / ase_objectScale.x ) ) * (tex2Dlod( _TextureSample0, float4( appendResult11, 0, 0.0) ).r*2.0 + -1.0) );
 				
 
 				#ifdef ASE_ABSOLUTE_VERTEX_POS
@@ -948,10 +949,11 @@ Shader "Glitch"
 				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO( o );
 
 				float3 viewToObjDir40 = mul( UNITY_MATRIX_T_MV, float4( _VertexOffset, 0 ) ).xyz;
+				float3 ase_objectScale = float3( length( GetObjectToWorldMatrix()[ 0 ].xyz ), length( GetObjectToWorldMatrix()[ 1 ].xyz ), length( GetObjectToWorldMatrix()[ 2 ].xyz ) );
 				float3 ase_worldPos = TransformObjectToWorld( (v.positionOS).xyz );
 				float mulTime10 = _TimeParameters.x * -2.5;
 				float2 appendResult11 = (float2((ase_worldPos.y*_GlitchTiling + mulTime10) , _TimeParameters.x));
-				float3 GlitchVertexOffset20 = ( ( viewToObjDir40 * _Intensity ) * (tex2Dlod( _TextureSample0, float4( appendResult11, 0, 0.0) ).r*2.0 + -1.0) );
+				float3 GlitchVertexOffset20 = ( ( viewToObjDir40 * ( _Intensity / ase_objectScale.x ) ) * (tex2Dlod( _TextureSample0, float4( appendResult11, 0, 0.0) ).r*2.0 + -1.0) );
 				
 
 				#ifdef ASE_ABSOLUTE_VERTEX_POS
@@ -1274,10 +1276,11 @@ Shader "Glitch"
 				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
 
 				float3 viewToObjDir40 = mul( UNITY_MATRIX_T_MV, float4( _VertexOffset, 0 ) ).xyz;
+				float3 ase_objectScale = float3( length( GetObjectToWorldMatrix()[ 0 ].xyz ), length( GetObjectToWorldMatrix()[ 1 ].xyz ), length( GetObjectToWorldMatrix()[ 2 ].xyz ) );
 				float3 ase_worldPos = TransformObjectToWorld( (v.positionOS).xyz );
 				float mulTime10 = _TimeParameters.x * -2.5;
 				float2 appendResult11 = (float2((ase_worldPos.y*_GlitchTiling + mulTime10) , _TimeParameters.x));
-				float3 GlitchVertexOffset20 = ( ( viewToObjDir40 * _Intensity ) * (tex2Dlod( _TextureSample0, float4( appendResult11, 0, 0.0) ).r*2.0 + -1.0) );
+				float3 GlitchVertexOffset20 = ( ( viewToObjDir40 * ( _Intensity / ase_objectScale.x ) ) * (tex2Dlod( _TextureSample0, float4( appendResult11, 0, 0.0) ).r*2.0 + -1.0) );
 				
 
 				#ifdef ASE_ABSOLUTE_VERTEX_POS
@@ -1558,10 +1561,11 @@ Shader "Glitch"
 				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
 
 				float3 viewToObjDir40 = mul( UNITY_MATRIX_T_MV, float4( _VertexOffset, 0 ) ).xyz;
+				float3 ase_objectScale = float3( length( GetObjectToWorldMatrix()[ 0 ].xyz ), length( GetObjectToWorldMatrix()[ 1 ].xyz ), length( GetObjectToWorldMatrix()[ 2 ].xyz ) );
 				float3 ase_worldPos = TransformObjectToWorld( (v.positionOS).xyz );
 				float mulTime10 = _TimeParameters.x * -2.5;
 				float2 appendResult11 = (float2((ase_worldPos.y*_GlitchTiling + mulTime10) , _TimeParameters.x));
-				float3 GlitchVertexOffset20 = ( ( viewToObjDir40 * _Intensity ) * (tex2Dlod( _TextureSample0, float4( appendResult11, 0, 0.0) ).r*2.0 + -1.0) );
+				float3 GlitchVertexOffset20 = ( ( viewToObjDir40 * ( _Intensity / ase_objectScale.x ) ) * (tex2Dlod( _TextureSample0, float4( appendResult11, 0, 0.0) ).r*2.0 + -1.0) );
 				
 
 				#ifdef ASE_ABSOLUTE_VERTEX_POS
@@ -1850,10 +1854,11 @@ Shader "Glitch"
 				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO( o );
 
 				float3 viewToObjDir40 = mul( UNITY_MATRIX_T_MV, float4( _VertexOffset, 0 ) ).xyz;
+				float3 ase_objectScale = float3( length( GetObjectToWorldMatrix()[ 0 ].xyz ), length( GetObjectToWorldMatrix()[ 1 ].xyz ), length( GetObjectToWorldMatrix()[ 2 ].xyz ) );
 				float3 ase_worldPos = TransformObjectToWorld( (v.positionOS).xyz );
 				float mulTime10 = _TimeParameters.x * -2.5;
 				float2 appendResult11 = (float2((ase_worldPos.y*_GlitchTiling + mulTime10) , _TimeParameters.x));
-				float3 GlitchVertexOffset20 = ( ( viewToObjDir40 * _Intensity ) * (tex2Dlod( _TextureSample0, float4( appendResult11, 0, 0.0) ).r*2.0 + -1.0) );
+				float3 GlitchVertexOffset20 = ( ( viewToObjDir40 * ( _Intensity / ase_objectScale.x ) ) * (tex2Dlod( _TextureSample0, float4( appendResult11, 0, 0.0) ).r*2.0 + -1.0) );
 				
 
 				#ifdef ASE_ABSOLUTE_VERTEX_POS
@@ -2153,10 +2158,11 @@ Shader "Glitch"
 				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
 
 				float3 viewToObjDir40 = mul( UNITY_MATRIX_T_MV, float4( _VertexOffset, 0 ) ).xyz;
+				float3 ase_objectScale = float3( length( GetObjectToWorldMatrix()[ 0 ].xyz ), length( GetObjectToWorldMatrix()[ 1 ].xyz ), length( GetObjectToWorldMatrix()[ 2 ].xyz ) );
 				float3 ase_worldPos = TransformObjectToWorld( (v.positionOS).xyz );
 				float mulTime10 = _TimeParameters.x * -2.5;
 				float2 appendResult11 = (float2((ase_worldPos.y*_GlitchTiling + mulTime10) , _TimeParameters.x));
-				float3 GlitchVertexOffset20 = ( ( viewToObjDir40 * _Intensity ) * (tex2Dlod( _TextureSample0, float4( appendResult11, 0, 0.0) ).r*2.0 + -1.0) );
+				float3 GlitchVertexOffset20 = ( ( viewToObjDir40 * ( _Intensity / ase_objectScale.x ) ) * (tex2Dlod( _TextureSample0, float4( appendResult11, 0, 0.0) ).r*2.0 + -1.0) );
 				
 				#ifdef ASE_ABSOLUTE_VERTEX_POS
 					float3 defaultVertexValue = v.positionOS.xyz;
@@ -2551,10 +2557,11 @@ Shader "Glitch"
 				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
 
 				float3 viewToObjDir40 = mul( UNITY_MATRIX_T_MV, float4( _VertexOffset, 0 ) ).xyz;
+				float3 ase_objectScale = float3( length( GetObjectToWorldMatrix()[ 0 ].xyz ), length( GetObjectToWorldMatrix()[ 1 ].xyz ), length( GetObjectToWorldMatrix()[ 2 ].xyz ) );
 				float3 ase_worldPos = TransformObjectToWorld( (v.positionOS).xyz );
 				float mulTime10 = _TimeParameters.x * -2.5;
 				float2 appendResult11 = (float2((ase_worldPos.y*_GlitchTiling + mulTime10) , _TimeParameters.x));
-				float3 GlitchVertexOffset20 = ( ( viewToObjDir40 * _Intensity ) * (tex2Dlod( _TextureSample0, float4( appendResult11, 0, 0.0) ).r*2.0 + -1.0) );
+				float3 GlitchVertexOffset20 = ( ( viewToObjDir40 * ( _Intensity / ase_objectScale.x ) ) * (tex2Dlod( _TextureSample0, float4( appendResult11, 0, 0.0) ).r*2.0 + -1.0) );
 				
 				#ifdef ASE_ABSOLUTE_VERTEX_POS
 					float3 defaultVertexValue = v.positionOS.xyz;
@@ -2983,10 +2990,11 @@ Shader "Glitch"
 				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
 
 				float3 viewToObjDir40 = mul( UNITY_MATRIX_T_MV, float4( _VertexOffset, 0 ) ).xyz;
+				float3 ase_objectScale = float3( length( GetObjectToWorldMatrix()[ 0 ].xyz ), length( GetObjectToWorldMatrix()[ 1 ].xyz ), length( GetObjectToWorldMatrix()[ 2 ].xyz ) );
 				float3 ase_worldPos = TransformObjectToWorld( (v.positionOS).xyz );
 				float mulTime10 = _TimeParameters.x * -2.5;
 				float2 appendResult11 = (float2((ase_worldPos.y*_GlitchTiling + mulTime10) , _TimeParameters.x));
-				float3 GlitchVertexOffset20 = ( ( viewToObjDir40 * _Intensity ) * (tex2Dlod( _TextureSample0, float4( appendResult11, 0, 0.0) ).r*2.0 + -1.0) );
+				float3 GlitchVertexOffset20 = ( ( viewToObjDir40 * ( _Intensity / ase_objectScale.x ) ) * (tex2Dlod( _TextureSample0, float4( appendResult11, 0, 0.0) ).r*2.0 + -1.0) );
 				
 
 				#ifdef ASE_ABSOLUTE_VERTEX_POS
@@ -3248,10 +3256,11 @@ Shader "Glitch"
 				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
 
 				float3 viewToObjDir40 = mul( UNITY_MATRIX_T_MV, float4( _VertexOffset, 0 ) ).xyz;
+				float3 ase_objectScale = float3( length( GetObjectToWorldMatrix()[ 0 ].xyz ), length( GetObjectToWorldMatrix()[ 1 ].xyz ), length( GetObjectToWorldMatrix()[ 2 ].xyz ) );
 				float3 ase_worldPos = TransformObjectToWorld( (v.positionOS).xyz );
 				float mulTime10 = _TimeParameters.x * -2.5;
 				float2 appendResult11 = (float2((ase_worldPos.y*_GlitchTiling + mulTime10) , _TimeParameters.x));
-				float3 GlitchVertexOffset20 = ( ( viewToObjDir40 * _Intensity ) * (tex2Dlod( _TextureSample0, float4( appendResult11, 0, 0.0) ).r*2.0 + -1.0) );
+				float3 GlitchVertexOffset20 = ( ( viewToObjDir40 * ( _Intensity / ase_objectScale.x ) ) * (tex2Dlod( _TextureSample0, float4( appendResult11, 0, 0.0) ).r*2.0 + -1.0) );
 				
 
 				#ifdef ASE_ABSOLUTE_VERTEX_POS
@@ -3395,21 +3404,23 @@ Shader "Glitch"
 }
 /*ASEBEGIN
 Version=19404
-Node;AmplifyShaderEditor.CommentaryNode;39;-1826,974;Inherit;False;1940;656.1428;Comment;14;6;8;10;7;13;5;19;18;11;15;16;17;20;40;;1,1,1,1;0;0
+Node;AmplifyShaderEditor.CommentaryNode;39;-1826,974;Inherit;False;1940;656.1428;Comment;16;6;8;10;7;13;5;19;18;11;15;16;17;20;40;42;44;;1,1,1,1;0;0
 Node;AmplifyShaderEditor.WorldPosInputsNode;6;-1776,1216;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
-Node;AmplifyShaderEditor.RangedFloatNode;8;-1776,1360;Inherit;False;Property;_GlitchTiling;GlitchTiling;1;0;Create;True;0;0;0;False;0;False;2;2;0;0;0;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;8;-1776,1360;Inherit;False;Property;_GlitchTiling;GlitchTiling;1;0;Create;True;0;0;0;False;0;False;2;1;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleTimeNode;10;-1776,1440;Inherit;False;1;0;FLOAT;-2.5;False;1;FLOAT;0
 Node;AmplifyShaderEditor.ScaleAndOffsetNode;7;-1504,1328;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;1;False;2;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleTimeNode;13;-1488,1488;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0
 Node;AmplifyShaderEditor.DynamicAppendNode;11;-1200,1344;Inherit;False;FLOAT2;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT2;0
-Node;AmplifyShaderEditor.Vector3Node;5;-1216,1040;Inherit;False;Property;_VertexOffset;VertexOffset;0;0;Create;True;0;0;0;False;0;False;1,0,0;0.1,0,0;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
-Node;AmplifyShaderEditor.RangedFloatNode;19;-800,1200;Inherit;False;Property;_Intensity;Intensity;3;0;Create;True;0;0;0;False;0;False;0.01;0.01;0;0;0;1;FLOAT;0
+Node;AmplifyShaderEditor.Vector3Node;5;-1544,1040;Inherit;False;Property;_VertexOffset;VertexOffset;0;0;Create;True;0;0;0;False;0;False;1,0,0;1,0,0;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
+Node;AmplifyShaderEditor.RangedFloatNode;19;-960,1168;Inherit;False;Property;_Intensity;Intensity;3;0;Create;True;0;0;0;False;0;False;0.01;0.00333;0;0;0;1;FLOAT;0
+Node;AmplifyShaderEditor.ObjectScaleNode;42;-960,1248;Inherit;False;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
 Node;AmplifyShaderEditor.SamplerNode;15;-960,1376;Inherit;True;Property;_TextureSample0;Texture Sample 0;2;0;Create;True;0;0;0;False;0;False;-1;63769cd5bf9c849b0880a5bd22934ea8;63769cd5bf9c849b0880a5bd22934ea8;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.TransformDirectionNode;40;-960,1040;Inherit;True;View;Object;False;Fast;False;1;0;FLOAT3;0,0,0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
+Node;AmplifyShaderEditor.TransformDirectionNode;40;-1328,1040;Inherit;True;View;Object;False;Fast;False;1;0;FLOAT3;0,0,0;False;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
+Node;AmplifyShaderEditor.SimpleDivideOpNode;44;-752,1232;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;18;-592,1136;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;1;FLOAT3;0
 Node;AmplifyShaderEditor.ScaleAndOffsetNode;16;-640,1376;Inherit;True;3;0;FLOAT;0;False;1;FLOAT;2;False;2;FLOAT;-1;False;1;FLOAT;0
-Node;AmplifyShaderEditor.SimpleMultiplyOpNode;17;-336,1296;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;1;FLOAT3;0
-Node;AmplifyShaderEditor.RegisterLocalVarNode;20;-128,1312;Inherit;False;GlitchVertexOffset;-1;True;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0
+Node;AmplifyShaderEditor.SimpleMultiplyOpNode;17;-336,1296;Inherit;True;2;2;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;1;FLOAT3;0
+Node;AmplifyShaderEditor.RegisterLocalVarNode;20;-96,1312;Inherit;False;GlitchVertexOffset;-1;True;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0
 Node;AmplifyShaderEditor.SamplerNode;22;144,-448;Inherit;True;Property;_BaseColor;BaseColor;4;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.GetLocalVarNode;21;320,48;Inherit;False;20;GlitchVertexOffset;1;0;OBJECT;;False;1;FLOAT3;0
 Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;29;672,-112;Float;False;False;-1;2;UnityEditor.ShaderGraphLitGUI;0;1;New Amplify Shader;94348b07e5e8bab40bd6c8a1e3df54cd;True;ExtraPrePass;0;0;ExtraPrePass;5;False;False;False;False;False;False;False;False;False;False;False;False;True;0;False;;False;True;0;False;;False;False;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;True;1;False;;True;3;False;;True;True;0;False;;0;False;;True;4;RenderPipeline=UniversalPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;UniversalMaterialType=Lit;True;5;True;12;all;0;False;True;1;1;False;;0;False;;0;1;False;;0;False;;False;False;False;False;False;False;False;False;False;False;False;False;True;0;False;;False;True;True;True;True;True;0;False;;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;True;1;False;;True;3;False;;True;True;0;False;;0;False;;True;0;False;False;0;;0;0;Standard;0;False;0
@@ -3429,12 +3440,14 @@ WireConnection;11;0;7;0
 WireConnection;11;1;13;0
 WireConnection;15;1;11;0
 WireConnection;40;0;5;0
+WireConnection;44;0;19;0
+WireConnection;44;1;42;1
 WireConnection;18;0;40;0
-WireConnection;18;1;19;0
+WireConnection;18;1;44;0
 WireConnection;16;0;15;1
 WireConnection;17;0;18;0
 WireConnection;17;1;16;0
 WireConnection;20;0;17;0
 WireConnection;30;8;21;0
 ASEEND*/
-//CHKSM=3EC7D8CCAC00F575FFC9B9239A42561DDC47ADF9
+//CHKSM=DD8B81AEC9D3282B2DECA92B2F0B1C0DDB9FA838
