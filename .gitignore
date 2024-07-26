@@ -70,3 +70,8 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Assets/Model/Characters (Don't Use In Book)/LizardMan.fbx.meta
+Assets/Model/Characters (Don't Use In Book)/LizardMan.fbx
+Assets/Model/Characters (Don't Use In Book)/FemaleLizardMan.meta
+Assets/Model/Characters (Don't Use In Book)/FemaleLizardMan.fbx.meta
+Assets/Model/Characters (Don't Use In Book)/FemaleLizardMan.fbx
