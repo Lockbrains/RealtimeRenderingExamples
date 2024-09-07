@@ -323,6 +323,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FemaleLizardMan
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e6ad4654b3757654f8f9147f65c97a6e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5472622940992281205, guid: e6ad4654b3757654f8f9147f65c97a6e,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -1077,7 +1082,7 @@ Transform:
   m_GameObject: {fileID: 7994571903138994590}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.80999994}
+  m_LocalPosition: {x: 0, y: 0, z: -2.09}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children: []

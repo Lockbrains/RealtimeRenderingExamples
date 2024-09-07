@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: c44e9712043522f48a24a6864dfca4fa
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _ScanLightTexture: {fileID: 2800000, guid: f34fe654ecbb91147b4d3d5f7cc9faac, type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

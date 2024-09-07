@@ -86,6 +86,11 @@ namespace AmplifyShaderEditor
 		{
 			AmplifyShaderEditorWindow.CreateConfirmationTemplateShader( "94348b07e5e8bab40bd6c8a1e3df54cd" );
 		}
+		[MenuItem( "Assets/Create/Amplify Shader/Universal/Multi-Pass Outline", false, 85 )]
+		public static void ApplyTemplateUniversalMultiPassOutline()
+		{
+			AmplifyShaderEditorWindow.CreateConfirmationTemplateShader( "93636dbe309cf204ca0b97063f439697" );
+		}
 		[MenuItem( "Assets/Create/Amplify Shader/Universal/Unlit", false, 85 )]
 		public static void ApplyTemplateUniversalUnlit()
 		{

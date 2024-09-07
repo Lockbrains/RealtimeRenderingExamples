@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: G8_VertexBend
-  m_Shader: {fileID: 4800000, guid: f456bdf4226f64095a943d293bcb85c7, type: 3}
+  m_Name: M_ToonBasic
+  m_Shader: {fileID: 4800000, guid: e4589529d51415345901b24695f96278, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -39,17 +39,33 @@ Material:
     m_Floats:
     - _AlphaCutoff: 0.5
     - _EnvironmentReflections: 1
+    - _Float0: 0.27582303
+    - _Layer1Shading: 0.26
+    - _Layer2Shading: 0.348
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _RotationAngle: 6.99
+    - _Shading: 0.1
     - _SpecularHighlights: 1
-    - __dirty: 0
+    - _SpecularPower: 333
+    - _TessEdgeLength: 16
+    - _TessMax: 25
+    - _TessMaxDisp: 25
+    - _TessMin: 10
+    - _TessPhongStrength: 0.5
+    - _TessValue: 16
+    - _TransAmbient: 0.1
+    - _TransDirect: 0.9
+    - _TransNormal: 0.5
+    - _TransScattering: 2
+    - _TransShadow: 0.5
+    - _TransStrength: 1
+    - _TransmissionShadow: 0.5
     m_Colors:
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 0}
+    - _BaseColor: {r: 1, g: 0.5190018, b: 0.17610055, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _RotatePivot: {r: 0, g: 0, b: 0, a: 0}
-    - _RotationAxis: {r: 1, g: 0, b: 0, a: 0}
-    - _VertexOffset: {r: 0, g: 0, b: 0, a: 0}
-    - _VertexScale: {r: 1, g: 1, b: 1, a: 0}
+    - _Layer1ShadowColor: {r: 0.4339623, g: 0.34662396, b: 0.37372893, a: 0}
+    - _LightPart: {r: 1, g: 1, b: 1, a: 0}
+    - _ShadowColor: {r: 0.8396226, g: 0.5136718, b: 0.10825317, a: 0}
+    - _SpecularColor: {r: 4, g: 2.8288488, b: 1.6477985, a: 0}
   m_BuildTextureStacks: []

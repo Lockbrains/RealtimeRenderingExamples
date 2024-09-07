@@ -108,7 +108,7 @@ Material:
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
-    - _FlickerSpeed: 0.2
+    - _FlickerSpeed: 0.44
     - _FresnelBias: 0.22
     - _FresnelPower: 6.11
     - _FresnelScale: 5.14

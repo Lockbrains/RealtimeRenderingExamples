@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Fresnel_Scanline
-  m_Shader: {fileID: 4800000, guid: ddf728c0e353a43d1ad09547f8baea2b, type: 3}
+  m_Name: Hologram
+  m_Shader: {fileID: 4800000, guid: c44e9712043522f48a24a6864dfca4fa, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -16,7 +16,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
@@ -64,14 +64,14 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ScanLightTexture:
-        m_Texture: {fileID: 2800000, guid: f34fe654ecbb91147b4d3d5f7cc9faac, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ScanlineTex:
-        m_Texture: {fileID: 2800000, guid: c5f773abdc26141dca5c927a20690094, type: 3}
-        m_Scale: {x: 1, y: 10}
+        m_Texture: {fileID: 2800000, guid: 398d5e67309ff456a949fe6353506f64, type: 3}
+        m_Scale: {x: 0, y: 10}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -104,21 +104,20 @@ Material:
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
-    - _FresnelBias: 0.14
-    - _FresnelPower: 2.67
-    - _FresnelScale: 5.14
+    - _GlitchFrequency: 100
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _Intensity: 5.15
+    - _Intensity: 1.07
     - _Metallic: 0
     - _OcclusionStrength: 1
+    - _Offset: 0
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _RimIntensity: 7.03
-    - _RimPower: 2.67
+    - _RimBias: 0.172
+    - _RimPower: 5.17
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -132,12 +131,11 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color0: {r: 0.6792453, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _InnerColor: {r: 0.005390823, g: 1, b: 0.13374491, a: 1}
-    - _InnerRimColor: {r: 0, g: 0, b: 0, a: 1}
-    - _RimColor: {r: 0.2688679, g: 0.4446926, b: 1, a: 1}
-    - _RimLightColor: {r: 0, g: 0, b: 0, a: 1}
+    - _InnerColor: {r: 1, g: 0, b: 0.028783798, a: 1}
+    - _RimColor: {r: 0, g: 0.6862744, b: 1, a: 1}
+    - _RimLightColor: {r: 1, g: 0.5613207, b: 0.6072291, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _Speed: {r: 0, g: -0.29, b: 0, a: 0}
+    - _Speed: {r: 0, g: -0.2, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &3106682681497468019
 MonoBehaviour:
